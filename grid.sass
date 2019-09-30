@@ -1,0 +1,44 @@
+$px: 10px
+$cl: #f67515
+$st: solid
+
+@mixin bg($cl)
+  background: $cl
+
+@mixin br($px, $cl, $st)
+  border: $px $cl $st
+
+@mixin wh($w, $h)
+  width: $w
+  height: $h
+@mixin flex()
+  display: flex
+  justify-content: center
+  align-items: center
+
+%bx
+  box-sizing: border-box
+
+body
+  background: #0000af
+.shall
+  max-width: 1200px
+  min-width: 300px
+  height: 600px
+  margin: 20px auto
+.gr
+  display: grid
+  color: #fff
+  grid-gap: 10px
+
+.box
+  +br($px, $cl, $st)
+  +flex()
+
+@import "media"
+
+
+
+
+
+
